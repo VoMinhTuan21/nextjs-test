@@ -23,13 +23,13 @@ export function middleware(request: NextRequest) {
 	const noAuthPage = [
 		APP_PATH.SIGN_IN,
 		APP_PATH.SIGN_UP,
-		// APP_PATH.HOME,
 		APP_PATH.LEGAL,
 		APP_PATH.CONTACT,
 		APP_PATH.SEARCH,
 		APP_PATH.CATEGORY,
 		APP_PATH.ABOUT,
 		APP_PATH.PRODUCT,
+		APP_PATH.HOME,
 	];
 
 	// if (cookie && noAuthPage.includes(pathname)) {
