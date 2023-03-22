@@ -1,3 +1,71 @@
 @tailwind base;
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		@apply text-dark-100;
+	}
+}
+
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+	.checkboxActive {
+		@apply border-[6px] border-primary-100 dark:border-primary-100;
+	}
+	.checkboxNoActive {
+		@apply border-2 border-gray-accent dark:border-black-dark-2;
+	}
+	.checkboxNoActiveBold {
+		@apply border-2 border-dark-40 dark:border-black-dark-2;
+	}
+
+	.image-container {
+		width: 100%;
+		position: unset !important;
+	}
+
+	.image-container .image {
+		object-fit: contain;
+		width: 100% !important;
+		position: relative !important;
+		height: unset !important;
+	}
+}
+
+.swiper-pagination {
+	bottom: 0 !important;
+}
+.swiper-pagination > .swiper-pagination-bullet {
+	opacity: 1;
+	height: 6px;
+	width: 6px;
+	background-color: #00cc96;
+}
+.swiper-pagination > .swiper-pagination-bullet-active {
+	background-color: transparent;
+	height: 8px;
+	width: 8px;
+	border: #00cc96 solid 1px;
+}
+
+@media only screen and (min-width: 1024px) {
+	.swiper-pagination {
+		bottom: 0 !important;
+		left: 0 !important;
+		transform: translateY(-50%) !important;
+	}
+}
